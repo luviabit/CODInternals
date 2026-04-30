@@ -9,13 +9,11 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 1.7rem;
 }
 
 main {
     padding: 2rem;
-    background-color: #f4f4f4;
-    border-radius: 15%;
 }
 
 button {
@@ -43,11 +41,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
   padding: 10px 20px;
   color: white;
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%);
 }
-
 
 .nav-links {
   display: flex;
@@ -63,10 +62,14 @@ footer {
   text-decoration: none;
   color: white;
   font-size: 18px;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, color 0.3s ease;
 }
 
 
 .nav-links a:hover {
   color: #ea00ff;
+  filter: brightness(1.5);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
