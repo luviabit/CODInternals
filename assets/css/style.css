@@ -3,7 +3,9 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-image: url("../images/background.png");
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("../images/background.png");
 }
 
 header {
@@ -115,4 +117,5 @@ footer {
 .btn-primary:hover { 
   transform: scale(1.05); /* 'translates' the buttons position to scale up by 0.05*/
 }
+
 
