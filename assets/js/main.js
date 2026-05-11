@@ -1,8 +1,7 @@
-function Test() {
-    console.log("Hello, World!");
-}
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader-wrapper");
+  const content = document.getElementById("content");
 
-Test();
-
-// will probably implement a loading screen if assets 
-// take too long to load, maybe some kind of animation
+  loader.style.display = "none"; // hide
+  content.style.display = "block"; // show main page content
+});
