@@ -1,136 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.home-page {
+  --theme-color-primary: #dc2626;
+  --theme-color-secondary: #991b1b;
+  --theme-glow-rgba-1: rgba(220, 38, 38, 0.6);
+  --theme-glow-rgba-2: rgba(153, 27, 27, 0.3);
 }
 
-.home-page {
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url("../images/background1.png");
-}
+
 
 .page2-page {
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url("../images/background2.jpg");                                                                                                   
+  --theme-color-primary: #00d2ff;
+  --theme-color-secondary: #3a7bd5;
+  --theme-glow-rgba-1: rgba(0, 210, 255, 0.6);
+  --theme-glow-rgba-2: rgba(58, 123, 213, 0.3);
 }
 
 .page3-page {
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url("../images/background3.png"); 
+  --theme-color-primary: #ff003c;
+  --theme-color-secondary: #111111;
+  --theme-glow-rgba-1: rgba(255, 0, 60, 0.7);
+  --theme-glow-rgba-2: rgba(0, 0, 0, 0.5);
 }
+
 
 .page4-page {
-    background-image: 
-      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url("../images/background4.png");
+  --theme-color-primary: #c5a059;
+  --theme-color-secondary: #8c6f34;
+  --theme-glow-rgba-1: rgba(197, 160, 89, 0.5);
+  --theme-glow-rgba-2: rgba(140, 111, 52, 0.25);
 }
 
-#loader-wrapper { /* short loading screen for when page content is still loading */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 0 100px 0; 
+    text-align: center;
+}
+
+.home-page { background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/background1.png"); } /* made smaller for readability*/
+.page2-page { background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/background2.jpg"); }
+.page3-page { background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/background3.png"); }
+.page4-page { background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/background4.png"); } 
+
+#loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: #111111;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* ensure that it stays above all the loading content */
+  z-index: 9999;
 }
 
-.spinner { /* spinner component */
+.spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid #dbb3b3;
-  border-top: 5px solid #cd34db;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-top: 5px solid var(--theme-color-primary); 
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
-@keyframes spin { /* keyframes for spinner animation */
+@keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-header {
-    color: white;
-    padding: 1.7rem;
+header { 
+  color: white; 
+  padding: 1.7rem; 
 }
 
-main {
-    padding: 2rem;
+main { 
+  padding: 2rem; 
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: 
+  border-box; 
 }
 
-footer {
-    background-color: #f4f4f4;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-test { /* attempted to make the navbar and footer the same theme*/
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1400px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding: 0.75rem 2rem;
-    z-index: 1000;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-
-}
-
-.footer-logo span {
-    color: #00d2ff;
-    font-weight: 700;
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.footer-links .nav-link {
-    font-size: 0.9rem;
-}
-
-.footer-socials .btn-primary {
-    padding: 0.4rem 1.2rem;
-    font-size: 0.85rem;
-}
-
-body {
-    padding-bottom: 100px; 
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.navbar, .footer-test {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1400px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding: 0.75rem 2rem;
+  z-index: 1000;
 }
 
 .navbar {
@@ -139,34 +105,27 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: space-between; /* checks the spacing between the links */
+  justify-content: space-between;
   align-items: center;
   padding: 0.75rem 2rem;
   width: 90%;
   max-width: 1400px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px); /* 'frost' effect */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px; /*rounding*/
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px); 
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px; 
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   z-index: 1000; 
-}
-
-.logo { /* for future logo, will prob add later?*/
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-}
-
-.logo span {
-  color: #00d2ff;
 }
 
 .nav-menu {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center; 
 }
 
 .nav-link {
@@ -175,62 +134,118 @@ body {
   font-weight: 500;
   transition: 0.3s ease;
   position: relative;
+  display: inline-block; 
 }
 
-.nav-link::after { /* underline animation when hovering */
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link::after {
   content: '';
   position: absolute;
   width: 0;
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #00d2ff;
-  transition: width 0.3s;
+  background-color: var(--theme-color-primary); 
+  transition: width 0.3s ease;
 }
 
-.nav-link:hover::after, .nav-link.active::after { /* ensure that the animation plays, broken on the first button??*/
+.nav-link:hover::after, .nav-link.active::after {
   width: 100%;
 }
 
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
+.footer-test { 
+  bottom: 20px; 
 }
 
-.btn-primary { /* for the button off to the right of the navbar*/
-  background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+.logo, .footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span, .footer-logo span { 
+  color: var(--theme-color-primary); 
+}
+
+.nav-menu, .footer-links { 
+  display: flex; gap: 
+  2rem; list-style: none; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.navbar .logo img { 
+  height: 40px; 
+  width: auto; 
+  display: block;
+}
+
+.footer-content { 
+  display: flex; 
+  justify-content: 
+  space-between; 
+  align-items: center; 
+  color: white; 
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+
+.nav-link:hover::after, .nav-link.active::after { 
+  width: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, var(--theme-color-primary), var(--theme-color-secondary));
   border: none;
-  padding: 0.6rem 1.5rem; /* sets the padding for the button to be large, so the button isn't too skinny*/
+  padding: 0.6rem 1.5rem;
   border-radius: 25px;
   color: white;
   font-weight: 600;
-  cursor: pointer; /* changes the cursor type to pointer*/
-  transition: transform 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-primary:hover { 
-  transform: scale(1.05); /* 'translates' the buttons position to scale up by 0.05*/
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--theme-glow-rgba-1);
 }
 
-.content-box1 {
-  display: flex;
-  gap: 15px;
-  justify-content: space-around;
+.content-box1 { 
+  display: flex; 
+  gap: 15px; 
+  justify-content: 
+  space-around; 
+  padding: 20px; 
 }
 
 .content {
   flex: 1;
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(15px); /* 'frost' effect */
-  border-radius: 50px; /*rounding*/
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px); /* 'frost' effect */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px); 
+  border-radius: 50px; 
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  z-index: 1000; 
+  color: white;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content:hover {
-  
+  transform: translateY(-10px);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.37), 
+    0 0 20px var(--theme-glow-rgba-1), 
+    0 0 40px var(--theme-glow-rgba-2);
 }
