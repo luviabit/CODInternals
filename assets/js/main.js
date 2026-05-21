@@ -34,7 +34,7 @@ function createIntenseSpark() { // Spark function for creating the COD Vanguard 
   }, 2000);
 }
 
-setInterval(createIntenseSpark, 60); // interval time between spawning particles
+setInterval(createIntenseSpark, 60);
 
 function createFlareSmoke() {
   const container = document.getElementById('smoke-container');
@@ -43,34 +43,30 @@ function createFlareSmoke() {
   const smoke = document.createElement('div');
   smoke.className = 'smoke-puff';
   
-  // Choose a base position (e.g., center of screen, or modify to cover full width)
-  // To make it look like a single localized hand-held flare, lock this to a specific spot like '50vw'
-  smoke.style.left = (Math.random() * 40 + 30) + 'vw'; // Concentrated around the center 30%-70%
+
+  smoke.style.left = (Math.random() * 40 + 30) + 'vw';
   
-  // Massive, irregular puff sizes
-  const baseSize = Math.random() * 60 + 60 + 'px'; // 60px to 120px base widths
+  const baseSize = Math.random() * 60 + 60 + 'px';
   smoke.style.width = baseSize;
   smoke.style.height = baseSize;
   
-  // Slow, heavy physics parameters
-  const riseDistance = -(Math.random() * 50 + 40) + 'vh'; // Rises halfway up the screen
-  const driftDistance = (Math.random() * 300 - 150) + 'px'; // Billows wide left or right
-  const rotation = (Math.random() * 180 - 90) + 'deg'; // Simulates churning gas
-  const duration = (Math.random() * 2.5 + 3.5) + 's'; // Slow burn (3.5 to 6 seconds)
+  const riseDistance = -(Math.random() * 50 + 40) + 'vh';
+  const driftDistance = (Math.random() * 300 - 150) + 'px';
+  const rotation = (Math.random() * 180 - 90) + 'deg';
+  const duration = (Math.random() * 2.5 + 3.5) + 's';
   
   smoke.style.setProperty('--rise-dist', riseDistance);
   smoke.style.setProperty('--drift-dist', driftDistance);
   smoke.style.setProperty('--rot', rotation);
   smoke.style.animationDuration = duration;
   
-  container.appendChild(smoke);
+  container.appendChild(smoke); // can't code js :( this is generated
   
-  // Matches the longer animation lifetime
   setTimeout(() => {
     smoke.remove();
   }, 6000);
 }
 
-// Spawns a steady, rolling stream of thick smoke
+
 setInterval(createFlareSmoke, 60);
 

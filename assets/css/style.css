@@ -1,17 +1,23 @@
+@font-face {
+  font-family: 'Hitmarker';
+  src: url(../fonts/Hitmarker-lite.ttf) format(truetype);
+  font-weight: normal;
+}
+
 .home-page {
   --theme-color-primary: #dc2626;
   --theme-color-secondary: #991b1b;
   --theme-glow-rgba-1: rgba(220, 38, 38, 0.6);
   --theme-glow-rgba-2: rgba(153, 27, 27, 0.3);
+  font-family: 'Hitmarker';
 }
-
-
 
 .page2-page {
   --theme-color-primary: #00d2ff;
   --theme-color-secondary: #3a7bd5;
   --theme-glow-rgba-1: rgba(0, 210, 255, 0.6);
   --theme-glow-rgba-2: rgba(58, 123, 213, 0.3);
+  font-family: 'Hitmarker';
 }
 
 .page3-page {
@@ -19,6 +25,7 @@
   --theme-color-secondary: #111111;
   --theme-glow-rgba-1: rgba(255, 0, 60, 0.7);
   --theme-glow-rgba-2: rgba(0, 0, 0, 0.5);
+  font-family: 'Hitmarker';
 }
 
 
@@ -27,6 +34,7 @@
   --theme-color-secondary: #8c6f34;
   --theme-glow-rgba-1: rgba(197, 160, 89, 0.5);
   --theme-glow-rgba-2: rgba(140, 111, 52, 0.25);
+  font-family: 'Hitmarker';
 }
 
 body {
