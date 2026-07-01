@@ -12,17 +12,15 @@
   <div class="spinner"></div>
 </div>
 
-<!-- <div id="smoke-container"></div> // TODO-->
-
 <div id="content" style="display:none;">
     <header class="header">
         <nav class="navbar">
             <a href="/index.html" class="logo"><img src="./assets/images/logo.png"></a>
             <ul class="nav-menu">
             <li class="nav-item"><a href="./index.html" class="nav-link active" data-target="page1">Home</a></li>
-            <li class="nav-item"><a href="./page2/index.html" class="nav-link">MW2019</a></li>
-            <li class="nav-item"><a href="./page3/index.html" class="nav-link">Cold War</a></li>
-            <li class="nav-item"><a href="./page4/index.html" class="nav-link">Vanguard</a></li>
+            <li class="nav-item"><a href="./modern-warfare/index.html" class="nav-link">MW2019</a></li>
+            <li class="nav-item"><a href="./cold-war/index.html" class="nav-link">Cold War</a></li>
+            <li class="nav-item"><a href="./vanguard/index.html" class="nav-link">Vanguard</a></li>
             </ul>
             <div class="nav-cta">
             <button class="btn-primary">Button</button> <!-- will be for home or something, not sure yet-->
@@ -31,34 +29,44 @@
     </header>
 
     <main>
-        <br>
-        <div class="content-box1">
-            <div class="content">
-                <strong>Welcome!</strong>
-                <br>
-                <br>
-                <p>Hello. Welcome to [name]!</p>
-                <p>Here's where I discuss everything Call of Duty: Warzone, from it's ins and outs to</p>
-                <p>revival projects that allow for modding capabilities.</p>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">COD Intel</p>
+                <h1>Warzone notes, history, and modding ideas in one place.</h1>
+                <p class="hero-text">A simple hub for exploring the major eras of the franchise, from modern warfare to Vanguard-inspired projects.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="./modern-warfare/index.html">Explore MW2019</a>
+                    <a class="btn btn-secondary" href="./vanguard/index.html">View Vanguard</a>
+                </div>
             </div>
-            <div class="content">
-                <video width="100%" height="auto" controls poster="https://yourdomain.com">
-                    <source src="https://cdn.luvie.dev/videos/video1cw.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
 
+            <div class="hero-panel">
+                <h2>Quick links</h2>
+                <div class="feature-grid">
+                    <a class="feature-card" href="./modern-warfare/index.html">
+                        <strong>MW2019</strong>
+                        <span>Modern Warfare stories and references</span>
+                    </a>
+                    <a class="feature-card" href="./cold-war/index.html">
+                        <strong>Cold War</strong>
+                        <span>Legacy content and era-focused notes</span>
+                    </a>
+                    <a class="feature-card" href="./vanguard/index.html">
+                        <strong>Vanguard</strong>
+                        <span>Gameplay and project inspiration</span>
+                    </a>
+                </div>
             </div>
-                
-        </div>
+        </section>
     </main>
 
     <footer class="footer-test">
         <div class="footer-content">
-            <span class="footer-logo">some text</span></p>
+            <span class="footer-logo">COD <span>Internals</span></span>
             <ul class="footer-links">
-                <li><a href="#" class="nav-link">test</a></li>
-                <li><a href="#" class="nav-link">test</a></li>
-                <li><a href="#" class="nav-link">test</a></li>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="./modern-warfare/index.html" class="nav-link">MW2019</a></li>
+                <li><a href="./vanguard/index.html" class="nav-link">Vanguard</a></li>
             </ul>
         </div>
     </footer>
